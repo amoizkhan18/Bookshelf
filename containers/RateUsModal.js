@@ -50,7 +50,7 @@ const RateUsModal = () => {
       <View style={styles.overlay}>
         <View style={styles.modalContainer}>
           <Image
-            source={require('../assets/rate-us.png')}
+            source={require('../assets/rate-us.png')} 
             style={styles.image}
           />
           <Text style={styles.title}>Rate Us</Text>
@@ -88,12 +88,13 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 280,
-    height: 80,
+    height: 50,
     resizeMode: 'contain',
   },
   title: {
     fontSize: 20,
     marginBottom: 10,
+    marginTop: 10,
     color: '#E04B07',
     fontFamily: 'AlegreyaSC-Bold',
   },
