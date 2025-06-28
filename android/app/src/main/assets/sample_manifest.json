@@ -1,0 +1,13 @@
+{
+    "metadata": {
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen"
+    },
+    "readingOrder": [
+      {
+        "href": "https://raw.githubusercontent.com/TechGuyR/epub-book-hosting/main/book.epub",
+        "type": "application/epub+zip"
+      }
+    ]
+  }
+  
