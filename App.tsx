@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Image, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import MainContainer from './containers/MainContainer';
+import MainContainer from './containers/MainContainer/MainContainer';
+import EpubReaderScreen from './containers/EpubReaderScreen';
 
 const RootStack = createStackNavigator();
 
@@ -32,7 +33,11 @@ const App = () => {
     <NavigationContainer>
       <RootStack.Navigator screenOptions={{ headerShown: false }}>
         {isSplashFinished ? (
-          <RootStack.Screen name="MainTabs" component={MainContainer} />
+          <>
+            <RootStack.Screen name="MainTabs" component={MainContainer} />
+            <RootStack.Screen name="EpubReaderScreen" component={EpubReaderScreen} />
+            {/* ...other root-level screens */}
+          </>
         ) : (
           <RootStack.Screen name="Splash">
             {() => <SplashScreen onFinish={() => setSplashFinished(true)} />}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
-import { audiobooksData } from '../data/audiobooksData';
+import { audiobooksData } from '../../data/audiobooksData';
 
 const AudioBooksScreen = ({ navigation }) => {
   const [audioBooksButtonColor, setAudioBooksButtonColor] = useState('#E04B07');
@@ -36,29 +36,29 @@ const AudioBooksScreen = ({ navigation }) => {
 
   // Array of Trending Items  
   const trendingItems = [
-    { id: 1, image: require('../assets/taoteching.png'), title: 'Tao Te Ching', author: 'Lao Tzu' },
-    { id: 2, image: require('../assets/warandpeace.png'), title: 'War & Peace', author: 'Leo Tolstoy' },
-    { id: 3, image: require('../assets/dracula.png'), title: 'Dracula', author: 'Bram Stoker' },
-    { id: 4, image: require('../assets/thegreatgatsby.png'), title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
-    { id: 5, image: require('../assets/sunalsorises.png'), title: 'The Sun Also Rises', author: 'Ernest Hemingway' },
-    { id: 6, image: require('../assets/asamanthinketh.png'), title: 'As a Man thinketh', author: 'James Allen' },
-    { id: 7, image: require('../assets/crimeandpunishment.png'), title: 'Crime & Punishment', author: 'Fyodor Dostoyevsky' },
-    { id: 8, image: require('../assets/murderofroger.png'), title: 'The Murder of Roger Ackroyd', author: 'Agatha Christie' },
-    { id: 9, image: require('../assets/countofmonte.png'), title: 'The Count of Monte Cristo', author: 'Alexandre Dumas' },
-    { id: 10, image: require('../assets/artofwar.png'), title: 'The Art of war', author: 'Sun tzu' },
+    { id: 1, image: require('../../assets/taoteching.png'), title: 'Tao Te Ching', author: 'Lao Tzu' },
+    { id: 2, image: require('../../assets/warandpeace.png'), title: 'War & Peace', author: 'Leo Tolstoy' },
+    { id: 3, image: require('../../assets/dracula.png'), title: 'Dracula', author: 'Bram Stoker' },
+    { id: 4, image: require('../../assets/thegreatgatsby.png'), title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
+    { id: 5, image: require('../../assets/sunalsorises.png'), title: 'The Sun Also Rises', author: 'Ernest Hemingway' },
+    { id: 6, image: require('../../assets/asamanthinketh.png'), title: 'As a Man thinketh', author: 'James Allen' },
+    { id: 7, image: require('../../assets/crimeandpunishment.png'), title: 'Crime & Punishment', author: 'Fyodor Dostoyevsky' },
+    { id: 8, image: require('../../assets/murderofroger.png'), title: 'The Murder of Roger Ackroyd', author: 'Agatha Christie' },
+    { id: 9, image: require('../../assets/countofmonte.png'), title: 'The Count of Monte Cristo', author: 'Alexandre Dumas' },
+    { id: 10, image: require('../../assets/artofwar.png'), title: 'The Art of war', author: 'Sun tzu' },
   ];
  
   const popularItems = [
-    { id: 11, image: require('../assets/sidhartha.png'), title: 'Siddhartha', author: 'Hermann Hesse' },
-    { id: 12, image: require('../assets/meditations.png'), title: 'Meditations', author: 'Marcus Aurelius' },
-    { id: 13, image: require('../assets/theprince.png'), title: 'The Prince', author: 'Niccolò Machiavelli' },
-    { id: 14, image: require('../assets/thinkandgrowrich.png'), title: 'Think & grow rich', author: 'Napoleon Hill' },
-    { id: 15, image: require('../assets/powerofyoursubconscious.png'), title: 'Power of Your Subconscious Mind', author: 'Joseph Murphy' },
-    { id: 16, image: require('../assets/divinecomedy.png'), title: 'Divine Comedy Inferno', author: 'Dante Alighieri' },
-    { id: 17, image: require('../assets/richestmaninbabylon.png'), title: 'The Richest Man in Babylon', author: 'George S. Clason' },
-    { id: 18, image: require('../assets/adventuresofhuckleberry.png'), title: 'Adventures of Huckleberry Finn', author: 'Mark Twain' },
-    { id: 19, image: require('../assets/miamotomusahi.png'), title: 'The Book of Five Rings', author: 'Miyamoto Musashi' },
-    { id: 20, image: require('../assets/prideandprejudice.png'), title: 'Pride & Prejudice', author: 'Jane Austen' },
+    { id: 11, image: require('../../assets/sidhartha.png'), title: 'Siddhartha', author: 'Hermann Hesse' },
+    { id: 12, image: require('../../assets/meditations.png'), title: 'Meditations', author: 'Marcus Aurelius' },
+    { id: 13, image: require('../../assets/theprince.png'), title: 'The Prince', author: 'Niccolò Machiavelli' },
+    { id: 14, image: require('../../assets/thinkandgrowrich.png'), title: 'Think & grow rich', author: 'Napoleon Hill' },
+    { id: 15, image: require('../../assets/powerofyoursubconscious.png'), title: 'Power of Your Subconscious Mind', author: 'Joseph Murphy' },
+    { id: 16, image: require('../../assets/divinecomedy.png'), title: 'Divine Comedy Inferno', author: 'Dante Alighieri' },
+    { id: 17, image: require('../../assets/richestmaninbabylon.png'), title: 'The Richest Man in Babylon', author: 'George S. Clason' },
+    { id: 18, image: require('../../assets/adventuresofhuckleberry.png'), title: 'Adventures of Huckleberry Finn', author: 'Mark Twain' },
+    { id: 19, image: require('../../assets/miamotomusahi.png'), title: 'The Book of Five Rings', author: 'Miyamoto Musashi' },
+    { id: 20, image: require('../../assets/prideandprejudice.png'), title: 'Pride & Prejudice', author: 'Jane Austen' },
 ];
 
   return (
@@ -66,7 +66,7 @@ const AudioBooksScreen = ({ navigation }) => {
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           {/* Top Left Logo */}
-          <Image source={require('../assets/bsnewlogo.png')} style={styles.logo} />
+          <Image source={require('../../assets/bsnewlogo.png')} style={styles.logo} />
 
           {/* Books Button */}
           <TouchableOpacity style={styles.button} onPress={handleBooksButtonPress}>
@@ -92,7 +92,7 @@ const AudioBooksScreen = ({ navigation }) => {
     style={styles.categoryButton}
     onPress={() => handleCategoryPress('Fiction', 'FICTION')}
   >
-    <Image source={require('../assets/fiction.jpg')} style={styles.categoryImage} />
+    <Image source={require('../../assets/fiction.jpg')} style={styles.categoryImage} />
     <Text style={styles.categoryText}>Fiction</Text>
   </TouchableOpacity>
 
@@ -100,7 +100,7 @@ const AudioBooksScreen = ({ navigation }) => {
     style={styles.categoryButton}
     onPress={() => handleCategoryPress('Nonfiction', 'NONFICTION')}
   >
-    <Image source={require('../assets/nonfiction.jpg')} style={styles.categoryImage} />
+    <Image source={require('../../assets/nonfiction.jpg')} style={styles.categoryImage} />
     <Text style={styles.categoryText}>Nonfiction</Text>
   </TouchableOpacity>
 </View>
@@ -110,7 +110,7 @@ const AudioBooksScreen = ({ navigation }) => {
     style={styles.categoryButton}
     onPress={() => handleCategoryPress('Fantasy', 'FANTASY')}
   >
-    <Image source={require('../assets/fantas.jpg')} style={styles.categoryImage} />
+    <Image source={require('../../assets/fantas.jpg')} style={styles.categoryImage} />
     <Text style={styles.categoryText}>Fantasy</Text>
   </TouchableOpacity>
 
@@ -118,7 +118,7 @@ const AudioBooksScreen = ({ navigation }) => {
     style={styles.categoryButton}
     onPress={() => handleCategoryPress('ScienceFiction', 'SCIENCE FICTION')}
   >
-    <Image source={require('../assets/ScienceFictionx.png')} style={styles.categoryImage} />
+    <Image source={require('../../assets/ScienceFictionx.png')} style={styles.categoryImage} />
     <Text style={styles.categoryText}>Science Fiction</Text>
   </TouchableOpacity>
 </View>

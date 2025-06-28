@@ -3,21 +3,21 @@ import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView, SafeAreaVi
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const categories = [
-  { genre: 'Romance', heading: 'ROMANCE', image: require('../assets/Romancex.png'), label: 'Romance' },
-  { genre: 'ShortStories', heading: 'SHORT STORIES', image: require('../assets/ShortStoriesx.png'), label: 'Short Stories' },
-  { genre: 'Thrillers', heading: 'THRILLERS', image: require('../assets/Thrillersx.png'), label: 'Thrillers' },
-  { genre: 'Mystery', heading: 'MYSTERY & DETECTIVE', image: require('../assets/Mysteryx.png'), label: 'Mystery &\nDetective' },
-  { genre: 'Children', heading: 'CHILDREN', image: require('../assets/Juvenilex.png'), label: 'Children' },
-  { genre: 'Biographical', heading: 'BIOGRAPHIES & MEMOIRS', image: require('../assets/Biographicalxx.png'), label: 'Biographies &\nMemoirs' },
-  { genre: 'Drama', heading: 'DRAMAS & PLAYS', image: require('../assets/Dramax.png'), label: 'Dramas & Plays' },
-  { genre: 'FairyTales', heading: 'FAIRYTALES', image: require('../assets/FairyTalesx.png'), label: 'Fairytales' },
-  { genre: 'SocialScience', heading: 'SOCIAL SCIENCES', image: require('../assets/SocialSciencex.png'), label: 'Social Sciences' },
-  { genre: 'Philosophy', heading: 'PHILOSOPHY', image: require('../assets/philosophy.jpg'), label: 'Philosophy' },
-  { genre: 'Fantasy', heading: 'FANTASY', image: require('../assets/fantas.jpg'), label: 'Fantasy' },
-  { genre: 'Literary', heading: 'LANGUAGES & LITERATURE', image: require('../assets/Literaryx.png'), label: 'Languages &\nLiterature' },
-  { genre: 'Poetry', heading: 'POETRY', image: require('../assets/Poetryx.png'), label: 'Poetry' },
-  { genre: 'ScienceFiction', heading: 'SCIENCE FICTION', image: require('../assets/ScienceFictionx.png'), label: 'Science Fiction' },
-  { genre: 'History', heading: 'HISTORY', image: require('../assets/Westernx.png'), label: 'History' },
+  { genre: 'Romance', heading: 'ROMANCE', image: require('../../assets/Romancex.png'), label: 'Romance' },
+  { genre: 'ShortStories', heading: 'SHORT STORIES', image: require('../../assets/ShortStoriesx.png'), label: 'Short Stories' },
+  { genre: 'Thrillers', heading: 'THRILLERS', image: require('../../assets/Thrillersx.png'), label: 'Thrillers' },
+  { genre: 'Mystery', heading: 'MYSTERY & DETECTIVE', image: require('../../assets/Mysteryx.png'), label: 'Mystery &\nDetective' },
+  { genre: 'Children', heading: 'CHILDREN', image: require('../../assets/Juvenilex.png'), label: 'Children' },
+  { genre: 'Biographical', heading: 'BIOGRAPHIES & MEMOIRS', image: require('../../assets/Biographicalxx.png'), label: 'Biographies &\nMemoirs' },
+  { genre: 'Drama', heading: 'DRAMAS & PLAYS', image: require('../../assets/Dramax.png'), label: 'Dramas & Plays' },
+  { genre: 'FairyTales', heading: 'FAIRYTALES', image: require('../../assets/FairyTalesx.png'), label: 'Fairytales' },
+  { genre: 'SocialScience', heading: 'SOCIAL SCIENCES', image: require('../../assets/SocialSciencex.png'), label: 'Social Sciences' },
+  { genre: 'Philosophy', heading: 'PHILOSOPHY', image: require('../../assets/philosophy.jpg'), label: 'Philosophy' },
+  { genre: 'Fantasy', heading: 'FANTASY', image: require('../../assets/fantas.jpg'), label: 'Fantasy' },
+  { genre: 'Literary', heading: 'LANGUAGES & LITERATURE', image: require('../../assets/Literaryx.png'), label: 'Languages &\nLiterature' },
+  { genre: 'Poetry', heading: 'POETRY', image: require('../../assets/Poetryx.png'), label: 'Poetry' },
+  { genre: 'ScienceFiction', heading: 'SCIENCE FICTION', image: require('../../assets/ScienceFictionx.png'), label: 'Science Fiction' },
+  { genre: 'History', heading: 'HISTORY', image: require('../../assets/Westernx.png'), label: 'History' },
 ];
 
 const SeeAllScreen = ({ navigation }) => {

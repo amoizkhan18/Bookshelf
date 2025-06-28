@@ -131,12 +131,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'AlegreyaSC-Bold',
   },
-  description: {
-    color: 'white',
-    fontSize: 16,
-    textAlign: 'left',
-    marginTop: 10,
-    fontFamily: 'AlegreyaSC-Bold',
+description: {
+  color: 'white',
+  fontSize: 16,
+  textAlign: 'left',
+  marginTop: 10,
+  lineHeight: 23,
   },
   moreButton: {
     backgroundColor: '#E04B07',

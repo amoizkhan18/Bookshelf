@@ -2,8 +2,8 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
 import { useFonts } from 'react-native-fonts'; // Changed from expo-font to react-native-fonts
 import  SplashScreen from 'react-native-splash-screen'; // Changed from expo-splash-screen to react-native-splash-screen
-import RateUsModal from './RateUsModal';
-import { booksData } from '../data/booksData';
+import RateUsModal from '../RateUsModal';
+import { booksData } from '../../data/booksData';
 
 
 const HomeScreen = ({ navigation }) => {
@@ -17,7 +17,7 @@ const HomeScreen = ({ navigation }) => {
     const loadFonts = async () => {
       try {
         await useFonts({
-          'AlegreyaSC-Bold': require('../assets/fonts/AlegreyaSC-Bold.ttf'),
+          'AlegreyaSC-Bold': require('../../assets/fonts/AlegreyaSC-Bold.ttf'),
         });
         setFontsLoaded(true);
         SplashScreen.hide(); // Hides the splash screen when fonts are loaded
@@ -72,30 +72,30 @@ const HomeScreen = ({ navigation }) => {
 
   // Array of Trending Items
   const trendingItems = [
-    { id: 1, image: require('../assets/thinkandgrowrich.png'), title: 'Think & Grow Rich', author: 'Napoleon Hill',},
-    { id: 2, image: require('../assets/asamanthinketh.png'), title: 'As a Man thinketh', author: 'James Allen' },
-    { id: 3, image: require('../assets/artofwar.png'), title: 'The Art of war', author: 'Sun tzu' },
-    { id: 4, image: require('../assets/richestmaninbabylon.png'), title: 'The richest man in babylon', author: 'George S. Clason' },
-    { id: 5, image: require('../assets/divinecomedy.png'), title: 'The Divine Comedy', author: 'Dante Alighieri' },
-    { id: 6, image: require('../assets/countofmonte.png'), title: 'The Count of Monte Cristo', author: 'Alexandre Dumas' },
-    { id: 7, image: require('../assets/sidhartha.png'), title: 'Siddhartha', author: 'Hermann Hesse' },
-    { id: 8, image: require('../assets/sunalsorises.png'), title: 'The Sun Also Rises', author: 'Ernest Hemingway' },
-    { id: 9, image: require('../assets/meditations.png'), title: 'Meditations', author: 'Marcus Aurelius' },
-    { id: 10, image: require('../assets/powerofyoursubconscious.png'), title: 'Power of Your Subconscious Mind', author: 'Joseph Murphy' },
+    { id: 1, image: require('../../assets/thinkandgrowrich.png'), title: 'Think & Grow Rich', author: 'Napoleon Hill',},
+    { id: 2, image: require('../../assets/asamanthinketh.png'), title: 'As a Man thinketh', author: 'James Allen' },
+    { id: 3, image: require('../../assets/artofwar.png'), title: 'The Art of war', author: 'Sun tzu' },
+    { id: 4, image: require('../../assets/richestmaninbabylon.png'), title: 'The richest man in babylon', author: 'George S. Clason' },
+    { id: 5, image: require('../../assets/divinecomedy.png'), title: 'The Divine Comedy', author: 'Dante Alighieri' },
+    { id: 6, image: require('../../assets/countofmonte.png'), title: 'The Count of Monte Cristo', author: 'Alexandre Dumas' },
+    { id: 7, image: require('../../assets/sidhartha.png'), title: 'Siddhartha', author: 'Hermann Hesse' },
+    { id: 8, image: require('../../assets/sunalsorises.png'), title: 'The Sun Also Rises', author: 'Ernest Hemingway' },
+    { id: 9, image: require('../../assets/meditations.png'), title: 'Meditations', author: 'Marcus Aurelius' },
+    { id: 10, image: require('../../assets/powerofyoursubconscious.png'), title: 'Power of Your Subconscious Mind', author: 'Joseph Murphy' },
 ];
 
   // Array of Popular Items
   const popularItems = [
-    { id: 11, image: require('../assets/thegreatgatsby.png'), title: 'The Great Gatsby', author: 'F. Scott Fitzgerald',},
-    { id: 12, image: require('../assets/murderofroger.png'), title: 'The Murder of Roger Ackroyd', author: 'Agatha Christie' },
-    { id: 13, image: require('../assets/warandpeace.png'), title: 'War & Peace', author: 'Leo Tolstoy' },
-    { id: 14, image: require('../assets/theprince.png'), title: 'The Prince', author: 'Niccolò Machiavelli' },
-    { id: 15, image: require('../assets/prideandprejudice.png'), title: 'Pride & Prejudice', author: 'Jane Austen' },
-    { id: 16, image: require('../assets/taoteching.png'), title: 'Tao Te Ching', author: 'Lao Tzu' },
-    { id: 17, image: require('../assets/miamotomusahi.png'), title: 'The Book of Five Rings', author: 'Miyamoto Musashi' },
-    { id: 18, image: require('../assets/dracula.png'), title: 'Dracula', author: 'Bram Stoker' },
-    { id: 19, image: require('../assets/adventuresofhuckleberry.png'), title: 'Adventures of Huckleberry Finn', author: 'Mark Twain' },
-    { id: 20, image: require('../assets/crimeandpunishment.png'), title: 'Crime & Punishment', author: 'Fyodor Dostoyevsky' },
+    { id: 11, image: require('../../assets/thegreatgatsby.png'), title: 'The Great Gatsby', author: 'F. Scott Fitzgerald',},
+    { id: 12, image: require('../../assets/murderofroger.png'), title: 'The Murder of Roger Ackroyd', author: 'Agatha Christie' },
+    { id: 13, image: require('../../assets/warandpeace.png'), title: 'War & Peace', author: 'Leo Tolstoy' },
+    { id: 14, image: require('../../assets/theprince.png'), title: 'The Prince', author: 'Niccolò Machiavelli' },
+    { id: 15, image: require('../../assets/prideandprejudice.png'), title: 'Pride & Prejudice', author: 'Jane Austen' },
+    { id: 16, image: require('../../assets/taoteching.png'), title: 'Tao Te Ching', author: 'Lao Tzu' },
+    { id: 17, image: require('../../assets/miamotomusahi.png'), title: 'The Book of Five Rings', author: 'Miyamoto Musashi' },
+    { id: 18, image: require('../../assets/dracula.png'), title: 'Dracula', author: 'Bram Stoker' },
+    { id: 19, image: require('../../assets/adventuresofhuckleberry.png'), title: 'Adventures of Huckleberry Finn', author: 'Mark Twain' },
+    { id: 20, image: require('../../assets/crimeandpunishment.png'), title: 'Crime & Punishment', author: 'Fyodor Dostoyevsky' },
 ];
 
   return (
@@ -103,7 +103,7 @@ const HomeScreen = ({ navigation }) => {
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           {/* Top Left Logo */}
-          <Image source={require('../assets/bsnewlogo.png')} style={styles.logo} />
+          <Image source={require('../../assets/bsnewlogo.png')} style={styles.logo} />
 
           {/* Books Button */}
           <TouchableOpacity style={[styles.button, { backgroundColor: booksButtonColor }]} onPress={handleBooksButtonPress}>
@@ -132,7 +132,7 @@ const HomeScreen = ({ navigation }) => {
     style={styles.categoryButton}
     onPress={() => handleCategoryPress('Romance', 'ROMANCE')}
   >
-    <Image source={require('../assets/Romancex.png')} style={styles.categoryImage} />
+    <Image source={require('../../assets/Romancex.png')} style={styles.categoryImage} />
     <Text style={styles.categoryText}>Romance</Text>
   </TouchableOpacity>
 
@@ -140,7 +140,7 @@ const HomeScreen = ({ navigation }) => {
     style={styles.categoryButton}
     onPress={() => handleCategoryPress('ShortStories', 'SHORT STORIES')}
   >
-    <Image source={require('../assets/ShortStoriesx.png')} style={styles.categoryImage} />
+    <Image source={require('../../assets/ShortStoriesx.png')} style={styles.categoryImage} />
     <Text style={styles.categoryText}>Short Stories</Text>
   </TouchableOpacity>
 </View>
@@ -150,7 +150,7 @@ const HomeScreen = ({ navigation }) => {
     style={styles.categoryButton}
     onPress={() => handleCategoryPress('Thrillers', 'THRILLERS')}
   >
-    <Image source={require('../assets/Thrillersx.png')} style={styles.categoryImage} />
+    <Image source={require('../../assets/Thrillersx.png')} style={styles.categoryImage} />
     <Text style={styles.categoryText}>Thrillers</Text>
   </TouchableOpacity>
 
@@ -158,7 +158,7 @@ const HomeScreen = ({ navigation }) => {
     style={styles.categoryButton}
     onPress={() => handleCategoryPress('Mystery', 'MYSTERY & DETECTIVE')}
   >
-    <Image source={require('../assets/Mysteryx.png')} style={styles.categoryImage} />
+    <Image source={require('../../assets/Mysteryx.png')} style={styles.categoryImage} />
     <Text style={styles.categoryText}>Mystery &{'\n'}Detective</Text>
   </TouchableOpacity>
 </View>

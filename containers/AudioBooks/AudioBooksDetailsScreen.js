@@ -132,7 +132,10 @@ const AudioBooksDetailsScreen = ({ route, navigation }) => {
         <TouchableOpacity style={[styles.backButton, { marginLeft: 10, top: 20 }]} onPress={handleBackPress}>
           <Icon name="chevron-left" size={30} color="#FFFFFF" />
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.homeButton, { marginRight: 10, top: 20 }]} onPress={() => navigation.navigate('MainContainer')}>
+        <TouchableOpacity
+          style={[styles.homeButton, { marginRight: 10, top: 20 }]}
+          onPress={() => navigation.navigate('AudioBooksScreen')}
+        >
           <Ionicons name="home-outline" size={30} color="#E04B07" />
         </TouchableOpacity>
       </View>
@@ -253,12 +256,12 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     marginTop: 0,
   },
-  description: {
-    color: 'white',
-    fontSize: 16,
-    textAlign: 'left',
-    marginTop: 10,
-    fontFamily: 'AlegreyaSC-Bold', 
+description: {
+  color: 'white',
+  fontSize: 16,
+  textAlign: 'left',
+  marginTop: 10,
+  lineHeight: 23,
   },
   moreButton: {
     backgroundColor: '#E04B07',

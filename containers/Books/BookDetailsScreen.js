@@ -38,9 +38,11 @@ const BookDetailsScreen = ({ route, navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity style={[styles.backButton, { marginLeft: 10 }]} onPress={handleBackPress}>
-        <Icon name="chevron-left" size={30} color="#FFFFFF" />
-      </TouchableOpacity>
+       <View style={styles.header}>
+    <TouchableOpacity style={[styles.backButton, { marginLeft: 10, top: 20 }]} onPress={handleBackPress}>
+      <Icon name="chevron-left" size={30} color="#FFFFFF" />
+    </TouchableOpacity>
+  </View>
       <ScrollView contentContainerStyle={styles.scrollView} showsVerticalScrollIndicator={false}>
         <TouchableOpacity onPress={handleReadBook} style={styles.imageWrapper}>
           <Image source={book.image} style={styles.mainImage} />
@@ -97,6 +99,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingBottom: 50,
   },
+    header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    paddingHorizontal: 10,
+    position: 'absolute',
+    top: 0,
+    zIndex: 1,
+  },
   imageWrapper: {
     alignSelf: 'center',
     justifyContent: 'center',
@@ -150,12 +162,12 @@ const styles = StyleSheet.create({
     fontFamily: 'AlegreyaSC-Bold',
     marginTop: 5,
   },
-  description: {
-    color: 'white',
-    fontSize: 16,
-    textAlign: 'left',
-    marginTop: 10,
-    fontFamily: 'AlegreyaSC-Bold',
+description: {
+  color: 'white',
+  fontSize: 16,
+  textAlign: 'left',
+  marginTop: 10,
+  lineHeight: 23,
   },
   moreButton: {
     backgroundColor: '#E04B07',

@@ -20,7 +20,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
 const { EPubReaderModule } = NativeModules;
-const fonts = ['serif', 'sans-serif', 'monospace', 'cursive', 'fantasy'];
+const fonts = ['serif', 'Georgia', 'Times New Roman', 'Roboto', 'monospace', 'cursive', 'fantasy' ];
 
 function EpubReaderScreen() {
   const navigation = useNavigation();
@@ -107,8 +107,12 @@ function EpubReaderScreen() {
       {/* Top bar */}
       <View style={styles.topBar}>
         <TouchableOpacity style={[styles.backButton, { marginLeft: 10 }]} onPress={handleBackPress}>
-          <Icon name="chevron-left" size={30} color="#FFFFFF" />
-        </TouchableOpacity>
+  <Icon
+    name="chevron-left"
+    size={30}
+    color={isDarkMode ? "#fff" : "#000"}
+  />
+</TouchableOpacity>
         <TouchableOpacity
           onPress={() => EPubReaderModule.highlightSelection()}
           style={styles.iconButton}

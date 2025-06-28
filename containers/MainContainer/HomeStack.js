@@ -1,24 +1,23 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './HomeScreen';
-import AudioBooksScreen from './AudioBooksScreen';
-import BooksDetailsScreen from './BooksDetailsScreen';
-import AudioBooksDetailsScreen from './AudioBooksDetailsScreen';
-import AudioBooksListScreen from './AudioBooksListScreen';
-import MusicScreen from './MusicScreen';
-import SeeAllScreen from './SeeAllScreen';
-import SeeAllAudioScreen from './SeeAllAudioScreen';
-import GhostScreen from '../similarbooks/GhostScreen';
-import IvanScreen from '../similarbooks/IvanScreen';
-import CabinScreen from '../similarbooks/CabinScreen';
-import CarmenScreen from '../similarbooks/CarmenScreen';
-import GhostBook from '../similarbooks/GhostBook';
-import dublinersscreen from '../similarbooks/dublinersscreen';
-import WarAudio from './WarAudio';
-import BooksListScreen from './BooksListScreen';
-import BookDetailsScreen from './BookDetailsScreen';
-import EpubReaderScreen from './EpubReaderScreen';
-import AudioBookDetailScreen from './AudioBookDetailScreen';
+import AudioBooksScreen from '../AudioBooks/AudioBooksScreen';
+import BooksDetailsScreen from '../Books/BooksDetailsScreen';
+import AudioBooksDetailsScreen from '../AudioBooks/AudioBooksDetailsScreen';
+import AudioBooksListScreen from '../AudioBooks/AudioBooksListScreen';
+import MusicScreen from '../AudioBooks/MusicScreen';
+import SeeAllScreen from '../Books/SeeAllScreen';
+import SeeAllAudioScreen from '../AudioBooks/SeeAllAudioScreen';
+import GhostScreen from '../../similarbooks/GhostScreen';
+import IvanScreen from '../../similarbooks/IvanScreen';
+import CabinScreen from '../../similarbooks/CabinScreen';
+import CarmenScreen from '../../similarbooks/CarmenScreen';
+import GhostBook from '../../similarbooks/GhostBook';
+import dublinersscreen from '../../similarbooks/dublinersscreen';
+import WarAudio from '../AudioBooks/WarAudio';
+import BooksListScreen from '../Books/BooksListScreen';
+import BookDetailsScreen from '../Books/BookDetailsScreen';
+import AudioBookDetailScreen from '../AudioBooks/AudioBookDetailScreen';
 
 
 
@@ -43,7 +42,6 @@ const HomeStack = () => (
             <Stack.Screen name="WarAudio" component={WarAudio} />
             <Stack.Screen name="BooksListScreen" component={BooksListScreen} />
             <Stack.Screen name="BookDetailsScreen" component={BookDetailsScreen} />
-            <Stack.Screen name="EpubReaderScreen" component={EpubReaderScreen} />
             <Stack.Screen name="AudioBookDetailScreen" component={AudioBookDetailScreen} />
     {/* ...add more screens as needed */}
   </Stack.Navigator>

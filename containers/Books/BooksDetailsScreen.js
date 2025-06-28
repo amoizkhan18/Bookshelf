@@ -45,7 +45,7 @@ const BooksDetailsScreen = ({ route, navigation }) => {
 
   setModalVisible(false);
   // Pass the correct data to PdfScreen
-  navigation.navigate("PdfScreen", { bookurl, totalpages: pagesToPass });
+  navigation.navigate("EpubReaderScreen", { bookurl, totalpages: pagesToPass });
 };
   
 
@@ -90,11 +90,11 @@ const handleSaveToLibrary = () => {
   }, [passedGenres]);
 
   const similarBooks = [
-    { id: '1', title: 'Dubliners', author: 'James Joyce', image: require('../assets/dubliners.jpg'), screen: 'dublinersscreen' }, 
-    { id: '2', title: 'The Prophet', author: 'Kahlil Gibran', image: require('../assets/prophet.jpg'), screen: 'GhostScreen' },
-    { id: '3', title: 'Ulysses', author: 'James Joyce', image: require('../assets/ulysses.jpg'), screen: 'IvanScreen' },
-    { id: '4', title: 'Bleak House', author: 'Charles Dickens', image: require('../assets/bleakhouse.jpg'), screen: 'CabinScreen' },
-    { id: '5', title: 'Carmilla', author: 'Joseph Sheridan Le Fanu', image: require('../assets/carmillaa.jpg'), screen: 'CarmenScreen' },
+    { id: '1', title: 'Dubliners', author: 'James Joyce', image: require('../../assets/dubliners.jpg'), screen: 'dublinersscreen' }, 
+    { id: '2', title: 'The Prophet', author: 'Kahlil Gibran', image: require('../../assets/prophet.jpg'), screen: 'GhostScreen' },
+    { id: '3', title: 'Ulysses', author: 'James Joyce', image: require('../../assets/ulysses.jpg'), screen: 'IvanScreen' },
+    { id: '4', title: 'Bleak House', author: 'Charles Dickens', image: require('../../assets/bleakhouse.jpg'), screen: 'CabinScreen' },
+    { id: '5', title: 'Carmilla', author: 'Joseph Sheridan Le Fanu', image: require('../../assets/carmillaa.jpg'), screen: 'CarmenScreen' },
   ];
 
   const handleSimilarBookPress = (screen) => {
@@ -107,7 +107,7 @@ const handleSaveToLibrary = () => {
     <TouchableOpacity style={[styles.backButton, { marginLeft: 10, top: 20 }]} onPress={handleBackPress}>
       <Icon name="chevron-left" size={30} color="#FFFFFF" />
     </TouchableOpacity>
-    <TouchableOpacity style={[styles.homeButton, { marginRight: 10, top: 20 }]} onPress={() => navigation.navigate('MainContainer')}>
+    <TouchableOpacity style={[styles.homeButton, { marginRight: 10, top: 20 }]} onPress={() => navigation.navigate('HomeScreen')}>
       <Ionicons name="home-outline" size={30} color="#E04B07" />
     </TouchableOpacity>
   </View>
@@ -244,12 +244,12 @@ const styles = StyleSheet.create({
     fontFamily: 'AlegreyaSC-Bold',
     marginTop: 5,
   },
-  description: {
-    color: 'white',
-    fontSize: 16,
-    textAlign: 'left',
-    marginTop: 10,
-    fontFamily: 'AlegreyaSC-Bold', 
+description: {
+  color: 'white',
+  fontSize: 16,
+  textAlign: 'left',
+  marginTop: 10,
+  lineHeight: 23,
   },
   moreButton: {
     backgroundColor: '#E04B07',
