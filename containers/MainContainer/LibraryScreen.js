@@ -61,25 +61,33 @@ const LibraryScreen = ({ navigation }) => {
       ? book.audiolinks
       : book.audiolinks.split(',').map(link => link.trim());
 
-    navigation.navigate('AudioBooksDetailsScreen', {
-      bookid: book.id,
-      genres: book.genres,
-      description,
-      imageurl: book.imageurl,
-      bookurl: book.bookurl,
-      audiolinks: audioArray,
-      title: book.title,
-      author: book.author,
-    });
+    navigation.navigate('Home', {
+  screen: 'AudioBooksDetailsScreen',
+  params: {
+    bookid: book.id,
+    title: book.title,
+    author: book.author,
+    imageurl: book.imageurl,
+    genres: book.genres,
+    description: book.description,
+    bookurl: book.bookurl,
+    audiolinks: audioArray,
+  }
+});
   } else {
-    navigation.navigate('BooksDetailsScreen', {
-      bookid: book.id,
-      bookurl: book.bookurl,
-      description,
-      genres: book.genres,
-      imageurl: book.imageurl,
-      totalpages,
-    });
+    navigation.navigate('Home', {
+  screen: 'BooksDetailsScreen',
+  params: {
+    bookid: book.id,
+    bookurl: book.bookurl,
+    description,
+    genres: book.genres,
+    imageurl: book.imageurl,
+    totalpages,
+    title: book.title,
+    author: book.author,
+  }
+});
   }
 };
 

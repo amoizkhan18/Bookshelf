@@ -13,7 +13,7 @@ import {
   Pressable,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
-import Ionicons from 'react-native-vector-icons/Ionicons'; // Updated import
+import Ionicons from 'react-native-vector-icons/Ionicons'; 
 
 const BooksDetailsScreen = ({ route, navigation }) => {
   const { bookid, imageurl: passedImageUrl, genres: passedGenres, description: passedDescription, bookurl: passedBookUrl, totalpages } = route.params;
