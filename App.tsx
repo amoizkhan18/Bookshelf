@@ -12,7 +12,7 @@ const RootStack = createStackNavigator();
 const SplashScreen = ({ onFinish }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      onFinish();
+      onFinish(); 
     }, 3000);
     return () => clearTimeout(timer);
   }, [onFinish]);
@@ -32,6 +32,8 @@ const App = () => {
   const [isSplashFinished, setSplashFinished] = useState(false);
   const [showCarousel, setShowCarousel] = useState(false);
   const [checkingFirstLaunch, setCheckingFirstLaunch] = useState(true);
+  console.log("🟢 JS LOADED:", new Date().toISOString());
+
 
   useEffect(() => {
     const checkFirstLaunch = async () => {

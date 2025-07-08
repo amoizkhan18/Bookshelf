@@ -78,7 +78,7 @@ const CarouselSplash = () => {
     if (activeIndex < images.length - 1 && flatListRef.current) {
       flatListRef.current.scrollToIndex({ index: activeIndex + 1, animated: true });
     } else if (activeIndex === 2) {
-      navigation.replace('HomeStack', { // Navigate to HomeStack when the last image is reached
+      navigation.replace('HomeScreen', { // Navigate to HomeStack when the last image is reached
         screen: 'HomeScreen',
       });
     }

@@ -102,7 +102,7 @@ const handleSaveToLibrary = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container}> 
   <View style={styles.header}>
     <TouchableOpacity style={[styles.backButton, { marginLeft: 10, top: 20 }]} onPress={handleBackPress}>
       <Icon name="chevron-left" size={30} color="#FFFFFF" />

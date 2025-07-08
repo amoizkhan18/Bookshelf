@@ -3,12 +3,11 @@ import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView, SafeAreaVi
 import { useFonts } from 'react-native-fonts'; // Changed from expo-font to react-native-fonts
 import  SplashScreen from 'react-native-splash-screen'; // Changed from expo-splash-screen to react-native-splash-screen
 import RateUsModal from '../RateUsModal';
-import { booksData } from '../../data/booksData';
 
 
 const HomeScreen = ({ navigation }) => {
   const [booksButtonColor, setBooksButtonColor] = useState('#E04B07');
-
+  
   const [fontsLoaded, setFontsLoaded] = useState(false); // Managing font load state manually
   const [fontError, setFontError] = useState(null);
  
@@ -61,13 +60,8 @@ const HomeScreen = ({ navigation }) => {
   navigation.navigate('BooksListScreen', { genre, heading });
 };
 
-  const handleItemPress = (item) => {
-  const book = booksData.find(b => b.id === item.id);
-  if (book) {
-    navigation.navigate('BookDetailsScreen', { book }); // Pass as { book }
-  } else {
-    console.warn(`No book data found for id: ${item.id}`);
-  }
+ const handleItemPress = (item) => {
+  navigation.navigate('BookDetailsScreen', { bookId: item.id }); // Pass only the id
 };
 
   // Array of Trending Items

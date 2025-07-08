@@ -10,10 +10,10 @@ export const booksData = [
     bookUrl: 'https://moizz.work.gd/assets/Think and Grow Rich - Unknown.epub',
     epubFileName: 'Think and Grow Rich - Unknown.epub',
       similarBooks: [
-      { id: 1, title: 'As A Man Thinketh', author: 'James Allen', image: require('../assets/asamanthinketh.png'), screen: 'SylviasScreen' },
-      { id: 2, title: 'The Art of War', author: 'Sun Tzu', image: require('../assets/artofwar.png'), screen: 'LastBowScreen' },
-      { id: 3, title: 'Siddhartha', author: 'Herman Hesse', image: require('../assets/sidhartha.png'), screen: 'PoorJackScreen' },
-      { id: 4, title: 'Meditations', author: 'Marcus Aurelius', image: require('../assets/meditations.png'), screen: 'FirstLoveScreen' },
+      { id: 1, title: 'As A Man Thinketh', author: 'James Allen', image: require('../assets/asamanthinketh.png')},
+      { id: 2, title: 'The Art of War', author: 'Sun Tzu', image: require('../assets/artofwar.png')},
+      { id: 3, title: 'Siddhartha', author: 'Herman Hesse', image: require('../assets/sidhartha.png') },
+      { id: 4, title: 'Meditations', author: 'Marcus Aurelius', image: require('../assets/meditations.png')},
     ],
   },
   {

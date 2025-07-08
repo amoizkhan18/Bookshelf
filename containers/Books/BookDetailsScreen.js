@@ -11,9 +11,11 @@ import {
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/Entypo';
+import { booksData } from '../../data/booksData';
 
 const BookDetailsScreen = ({ route, navigation }) => {
-  const { book } = route.params; // Pass book object via navigation
+  const { bookId } = route.params;
+  const book = booksData.find(b => b.id === bookId)
 
   const [showMore, setShowMore] = useState(false);
 
@@ -83,7 +85,7 @@ const BookDetailsScreen = ({ route, navigation }) => {
               </View>
             </TouchableOpacity>
           )}
-          showsHorizontalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false} 
         />
       </ScrollView>
     </SafeAreaView>
