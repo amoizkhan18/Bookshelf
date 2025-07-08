@@ -1,3 +1,17 @@
+# 📚 React Native Bookshelf App
+
+This is a full-fledged React Native application for **book reading** (EPUB support) and **audiobook listening**. It includes:
+
+- A fully integrated **EPUB reader**
+- A complete **music/audio screen** for audiobooks
+- Beautifully designed **UI and navigation**
+- Saved **favorites and library** management
+- **Light/dark mode**, **font adjustments**, **text highlighting**, and more
+
+📸 App screenshots are available inside the [`/screenshots`](./screenshots) folder.
+
+---
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
